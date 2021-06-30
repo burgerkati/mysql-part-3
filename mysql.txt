@@ -2,8 +2,9 @@ mysql-part-3 exercises
 
 exercice 1
 
-CREATE DATABASE `codex`;
-USE DATABASE codex;
+SHOW DATABASES;
+CREATE DATABASE `codex` CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;;
+USE codex;
 CREATE TABLE `clients` (`id` INT AUTO_INCREMENT PRIMARY KEY, `lastName` VARCHAR(30), `firstName` VARCHAR(30), `birth` DATE, `address` VARCHAR(50), `phoneNumber` VARCHAR(20), `email` VARCHAR (30));
 
 exercice 2
@@ -27,3 +28,8 @@ ALTER TABLE frameworks CHANGE `name` `framework`;
 exercice 6
 
 ALTER TABLE frameworks CHANGE `version` `version` VARCHAR(10);
+
+exercice bonus
+
+USE codex;
+ALTER TABLE clients DROP `phoneNumber`, CHANGE `mail` `mails` VARCHAR(30), ADD `zipCode` VARCHAR(10), ADD `city` VARCHAR();

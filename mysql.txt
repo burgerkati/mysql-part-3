@@ -12,25 +12,27 @@ exercice 2
 SHOW DATABASES;
 USE webDevelopment;
 ALTER TABLE `languages` ADD `versions` VARCHAR(30);
-DESCRIBE `frameworks`;
 
 exercice 3
 
+DESCRIBE `frameworks`;
 ALTER TABLE `frameworks` ADD `version` INT;
 
 exercice 4
 
+DESCRIBE `languages`;
 ALTER TABLE `languages` CHANGE `versions` `version` VARCHAR(30);
 
 exercice 5
 
+DESCRIBE `frameworks`;
 ALTER TABLE `frameworks` RENAME COLUMN `name` TO `framework`;
 ALTER TALBE `frameworks` CHANGE `name` `framework` VARCHAR(30);
 (The column was already named framework)
 
 exercice 6
 
-ALTER TABLE frameworks MODIFY `version` VARCHAR(10);
+ALTER TABLE `frameworks` MODIFY `version` VARCHAR(10);
 
 exercice bonus
 

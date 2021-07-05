@@ -10,26 +10,29 @@ CREATE TABLE `clients` (`id` INT AUTO_INCREMENT PRIMARY KEY, `lastName` VARCHAR(
 exercice 2
 
 SHOW DATABASES;
-USE DATABASE webDevelopment;
-ALTER TABLE languages ADD `versions` VARCHAR(30);
+USE webDevelopment;
+ALTER TABLE `languages` ADD `versions` VARCHAR(30);
+DESCRIBE `frameworks`;
 
 exercice 3
 
-ALTER TABLE frameworks ADD `versions` INT;
+ALTER TABLE `frameworks` ADD `version` INT;
 
 exercice 4
 
-ALTER TABLE languages CHANGE `versions` `version`;
+ALTER TABLE `languages` CHANGE `versions` `version` VARCHAR(30);
 
 exercice 5
 
-ALTER TABLE frameworks CHANGE `name` `framework`;
+ALTER TABLE `frameworks` RENAME COLUMN `name` TO `framework`;
+ALTER TALBE `frameworks` CHANGE `name` `framework` VARCHAR(30);
+(The column was already named framework)
 
 exercice 6
 
-ALTER TABLE frameworks CHANGE `version` `version` VARCHAR(10);
+ALTER TABLE frameworks MODIFY `version` VARCHAR(10);
 
 exercice bonus
 
 USE codex;
-ALTER TABLE clients DROP `phoneNumber`, CHANGE `mail` `mails` VARCHAR(30), ADD `zipCode` VARCHAR(10), ADD `city` VARCHAR();
+ALTER TABLE clients DROP `phoneNumber`, CHANGE `email` `emails` VARCHAR(30), ADD `zipCode` VARCHAR(10), ADD `city` VARCHAR(50);
